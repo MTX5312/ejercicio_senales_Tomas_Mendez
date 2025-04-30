@@ -9,8 +9,15 @@ var violetScene = preload ("res://scenes/Blocks/Violet/BlockViolet.tscn")
 func _ready():
 	# Inicializa el texto de "CountLabel" usando el texto
 	# Constante "INSTANCES_TEXT" más el valor de "instancesCount" como Texto
-	$CountLabel.text = INSTANCES_TEXT + str(instancesCount)
+	actualizar_texto()
 	pass
+
+func count_new_instance():
+	instancesCount += 1
+	actualizar_texto()
+
+func actualizar_texto():
+	$CountLabel.text = INSTANCES_TEXT + str(instancesCount)
 
 func _on_red_generator_button_down() -> void:
 	generate_red_block()
