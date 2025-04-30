@@ -3,6 +3,8 @@ extends Node2D
 const INSTANCES_TEXT = "Cantidad de instancias: "
 # Variable para contar cantidad de instancias
 var instancesCount = 0
+var redScene = preload ("res://scenes/Blocks/Red/BlockRed.tscn")
+var violetScene = preload ("res://scenes/Blocks/Violet/BlockViolet.tscn")
 
 func _ready():
 	# Inicializa el texto de "CountLabel" usando el texto
@@ -10,10 +12,16 @@ func _ready():
 	$CountLabel.text = INSTANCES_TEXT + str(instancesCount)
 	pass
 
-
 func _on_red_generator_button_down() -> void:
-	pass # Replace with function body.
+	generate_red_block()
 
+func generate_red_block():
+	var instance = redScene.instantiate()
+	add_child(instance)
 
 func _on_violet_generator_button_down() -> void:
-	pass # Replace with function body.
+	generate_violet_block()
+
+func generate_violet_block():
+	var instance = violetScene.instantiate()
+	add_child(instance)
