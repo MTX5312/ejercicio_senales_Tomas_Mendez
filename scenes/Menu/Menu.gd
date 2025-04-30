@@ -17,3 +17,7 @@ func actualizar_texto():
 
 func _on_button_down() -> void:
 	count_new_instance()
+
+func delete():
+	instancesCount == 0
+	actualizar_texto()
