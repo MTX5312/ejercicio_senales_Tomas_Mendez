@@ -1,1 +1,4 @@
 res://scenes/Menu/Menu.tscn
+res://scenes/Blocks/Red/block_red.gd
+res://scenes/Blocks/Violet/block_violet.gd
+res://scenes/Menu/Menu.gd
