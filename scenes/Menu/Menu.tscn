@@ -51,10 +51,10 @@ offset_bottom = 144.0
 text = "Cantidad de Instancias:
 "
 
-[node name="BlockRed" parent="." instance=ExtResource("8_crtg2")]
+[node name="BlockRed" parent="." groups=["blocks"] instance=ExtResource("8_crtg2")]
 position = Vector2(-37, -38)
 
-[node name="BlockViolet" parent="." instance=ExtResource("9_2u53u")]
+[node name="BlockViolet" parent="." groups=["blocks"] instance=ExtResource("9_2u53u")]
 position = Vector2(1211, -45)
 
 [connection signal="button_down" from="RedGenerator" to="." method="_on_red_generator_button_down"]
